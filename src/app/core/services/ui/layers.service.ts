@@ -10,6 +10,7 @@ import {
   View,
   CoreTypes,
   ProxyViewContainer,
+  Dialogs,
 } from "@nativescript/core";
 import { BehaviorSubject, Observable } from "rxjs";
 import {
@@ -63,21 +64,13 @@ export class LayersService {
   }
 
   openMenu(): void {
-    this._layers$.next({
-      ...this.getLayersCurrentValue(),
-      menu: {
-        isOpen: true,
-      },
+    Dialogs.confirm("Do you want open menu?").then(function (result) {
+      console.log("Dialog result: " + result);
     });
   }
 
   closeMenu(): void {
-    this._layers$.next({
-      ...this.getLayersCurrentValue(),
-      menu: {
-        isOpen: false,
-      },
-    });
+    console.log("Close menu tapped");
   }
 
   openAlertPopup(): void {
