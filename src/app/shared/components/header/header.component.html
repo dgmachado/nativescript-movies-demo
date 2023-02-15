@@ -28,7 +28,7 @@
             (tap)="openMenu()">
             <Label
                 verticalAlignment="center"
-                [text]="icons.menu"
+                [text]="icons.menu" testID="navBarLeftButton"
                 class="ionicons font-size-h1 text-color-gray"></Label>
         </GridLayout>
     </ng-container>
@@ -42,7 +42,7 @@
             <Label
                 verticalAlignment="center"
                 [text]="rightActionButton.icon"
-                textAlignment="right"
+                textAlignment="right" testID="navBarRightButton"
                 class="ionicons font-size-h1 text-color-gray"></Label>
         </GridLayout>
     </ng-container>

@@ -6,7 +6,7 @@
     class="bg-color-default"
     borderRadius="15 15 0 0">
     
-    <Label row="0" col="0" margin="0 25" text="SEARCH" fontSize="30" class="bold text-color-primary"></Label>
+    <Label row="0" col="0" margin="0 25" text="SEARCH" fontSize="30" class="bold text-color-primary" testID="searchTitle"></Label>
     <GridLayout
         row="0"
         col="1"
@@ -19,7 +19,7 @@
             textAlignment="right"
             color="#444"
             fontSize="25"
-            class="ionicons"></Label>
+            class="ionicons" testID="searchIcon"></Label>
     </GridLayout>
 
     <GridLayout
@@ -38,7 +38,7 @@
             color="#777"
             fontSize="25"
             class="ionicons"></Label>
-        <TextField col="1" marginLeft="10" fontSize="20" hint="Batman"></TextField>
+        <TextField col="1" marginLeft="10" fontSize="20" hint="Batman" testID="input"></TextField>
     </GridLayout>
 
     <ScrollView

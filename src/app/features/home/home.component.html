@@ -34,6 +34,7 @@
                             width="150"
                             color="#fff"
                             fontSize="14"
+                            testID="playNowButton"
                             (tap)="openAlertPopup()"></Button>
                     </StackLayout>
                 </GridLayout>
@@ -70,7 +71,7 @@
                 <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false">
                     <StackLayout orientation="horizontal" padding="10 20">
                         <ng-container *ngFor="let product of group.products">
-                            <ContentView verticalAlignment="bottom" (tap)="openProductDetails(product.id)">
+                            <ContentView verticalAlignment="bottom" (tap)="openProductDetails(product.id)" [testID]="product.title">
                                 <ns-thumbnail-card [imageSrc]="product.image.thumbnail"></ns-thumbnail-card>
                             </ContentView>
                         </ng-container>
